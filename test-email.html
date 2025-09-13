@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Button Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            background: #0A0A0A;
+            color: white;
+        }
+        .test-button {
+            background: #4397C6;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px;
+        }
+        .test-button:hover {
+            background: #5aa8d6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Email Button Test</h1>
+    <p>Click the button below to test if the email functionality works:</p>
+    
+    <button id="email-float" class="test-button">
+        📧 Test Email Button
+    </button>
+    
+    <p>This should open your default email client with hello@fusion4o.com</p>
+
+    <script>
+        // Test the email functionality
+        const emailFloat = document.getElementById('email-float');
+        if (emailFloat) {
+            emailFloat.addEventListener('click', (e) => {
+                e.preventDefault();
+                console.log('Email button clicked!');
+                window.location.href = 'mailto:hello@fusion4o.com';
+            });
+        }
+    </script>
+</body>
+</html>
